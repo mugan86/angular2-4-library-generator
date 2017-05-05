@@ -1,11 +1,9 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { DefaultImage } from './default-image.directive';
-import { SampleDirective } from './utilities.directive';
+import { {{cookiecutter.library_name.capitalize()}}Directive } from './{{cookiecutter.library_name.lower().replace(' ', '_'))}}.directive';
 
 export const DIRECTIVES = [
-  DefaultImage,
-  SampleDirective
+  {{cookiecutter.library_name.capitalize()}}Directive
 ];
 
 @NgModule({

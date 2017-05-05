@@ -12,221 +12,6 @@ $ npm install https://github.com/mugan86/ng-2-4-utilities.git#0.1.6 --save
 
 ### Pipes
 
-#### Math Type pipes
-
-1.- 'abs': 
-
- * Math.abs(x) returns the absolute (positive) value of x
- * Math.abs(-4.7) = 4.7
- * Math.abs(4.4) = 4.4
- 
- Use in layout: 
- ```bash
- {{x | mathAbs}} 
- {{-4.7 | mathAbs}} ---> 4.7
- {{4.7 | mathAbs}} ---> 4.7
- ```
- 
-2.- 'ceil': 
-
- * Math.ceil(x) returns the value of x rounded up to its nearest integer
- * Math.ceil(4.7) = 5
- * Math.ceil(4.4) = 5
- 
- Use in layout: 
- ```bash
- {{x | mathCeil}} 
- {{4.7 | mathCeil}} ---> 5
- {{4.4 | mathCeil}} ---> 5
- ```
- 
-3.- 'floor': 
-
- * Math.floor(x) returns the value of x rounded down to its nearest integer
- * Math.floor(4.7) = 4
- * Math.floor(4.4) = 4
- 
- Use in layout: 
- ```bash
- {{x | mathFloor}} 
- {{4.7 | mathFloor}} ---> 4
- {{4.4 | mathFloor}} ---> 4
- ```
-
-4.- 'pow': 
-
- * Math.pow(x, y) returns the value of x to the power of y:
- * Math.pow(8,2) = 64
- 
- Use in layout: 
- ```bash
- {{x | mathPow:y}} 
- {{8 | mathPow: 2}} ---> 64 (8^2 = 64)
- {{2 | mathPow:4}} ---> 16
- ```
-
-5.- 'round': 
-
- * Math.round(x) returns the value of x rounded to its nearest integer
- * Math.round(4.7) = 5
- * Math.round(4.4) = 4
- 
- Use in layout: 
- ```bash
- {{x | mathRound}} 
- {{4.7 | mathRound}} ---> 5
- {{4.4 | mathRound}} ---> 4
- ```
- 
-6.- 'sqrt': 
-
- * Math.sqrt(x) returns the square root of x
- * Math.sqrt(64) = 8
- 
- Use in layout: 
- ```bash
- {{x | mathSqrt}} 
- {{64 | mathRound}} ---> 8
- {{16 | mathRound}} ---> 4
- ```
-
-7.- 'sum': 
-
- * x+y returns sum x + y
- 
- Use in layout: 
- ```bash
- {{x | mathSum:y}} 
- {{64 | mathSum:3}} ---> 67
- ```
-
-8.- 'subtract': 
-
- * x-y returns subtract x - y
- 
- Use in layout: 
- ```bash
- {{x | mathSubtract:y}} 
- {{64 | mathSubtract:3}} ---> 61
- ```
-9.- 'multiply': 
-
- * x*y returns multiply x * y
- 
- Use in layout: 
- ```bash
- {{x | mathMultiply:y}} 
- {{2 | mathMultiply:4}} ---> 8
- ```
-
-10.- 'divide': 
-
- * x/y returns divide x / y
- 
- Use in layout: 
- ```bash
- {{x | mathDivide:y}} 
- {{4 | mathDivide:4}} ---> 1
- ```
-
-11.- 'prime': 
-
- * Check if input number prime
- 
- Use in layout: 
- ```bash
- {{x | mathPrime}} 
- {{4 | mathPrime}} ---> false
- ```
-
-12.- 'factorial': 
-
- * Return input number value factorial (3!)
- 
- Use in layout: 
- ```bash
- {{x | mathFactorial}} 
- {{3 | mathFactorial}} ---> 3! = 1*2*3 = 6
- ```
- 
-#### String Type pipes
-
-1.- 'allWordsCapitalize': 
-
- * Input all words start with capitalize letter
- 
- Use in layout: 
- ```bash
- {{'word/s' | allWordsCapitalize}} 
- {{'anartz mugika' | allWordsCapitalize}} ---> 'Anartz Mugika'
- {{'Anartz mugika' | allWordsCapitalize}} ---> 'Anartz Mugika'
- {{'all words start with uppercase letter' | allWordsCapitalize}} ---> 'All Words Start With...'
- 
- ```
-2.- 'capitalize': 
-
- * Input all words start with first letter capitalize
- 
- Use in layout: 
- ```bash
- {{'word/s' | capitalize}} 
- {{'anartz mugika' | capitalize}} ---> 'Anartz mugika'
- {{'Anartz mugika' | capitalize}} ---> 'Anartz mugika'
- {{'first letter is uppercase' | capitalize}} ---> 'First letter is uppercase...'
- 
- ```
-
-3.- 'concat': 
-
- * Concat two words
- 
- Use in layout: 
- ```bash
- {{'word/s' | concat}} 
- {{'anartz mugika' | concat:'text'}} ---> 'anartz mugika test'
- 
- ```
-
-4.- 'noVowelHide': 
-
- * Hide all consonants with '*'
- 
- Use in layout: 
- ```bash
- {{'word/s' | noVowelHide}} 
- {{'anartz mugika' | noVowelHide}} ---> 'a*a*****u*i*a'
- 
- ```
- 
-5.- 'reverseStr':
-
- * Invert all word chars
- 
- Use in layout: 
- ```bash
- {{'word/s' | reverseStr}} 
- {{'anartz' | reverseStr}} ---> 'ztrana'
- ```
- 
-6.- 'trim':
-
- * Remove all blank spaces in start and finish to select word or phrase
- 
- Use in layout: 
- ```bash
- {{'word/s' | trim}} 
- {{'   anartz  ' | trim}} ---> 'anartz'
- ```
- 
-7.- 'vowelHide':
-
- * Hide all vowels with '*'
- 
- Use in layout: 
- ```bash
- {{'word/s' | vowelHide}} 
- {{'anartz' | vowelHide}} ---> '*n*rtz'
- ```
 
 #### Other Type pipes
 
@@ -242,7 +27,7 @@ $ npm install https://github.com/mugan86/ng-2-4-utilities.git#0.1.6 --save
 
  1.2.- Transform inside component:
  ```typescript
- import { CreditCardMaskPipe } from 'ng-2-4-utilities';
+ import { CreditCardMaskPipe } from 'ng-2-4-<title>';
  @Component()
  export class AppComponent()
  {
@@ -305,7 +90,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { UtilitiesModule } from 'ng-2-4-utilities';
+import { <title>Module } from 'ng-2-4-<title>';
 
 @NgModule({
   declarations: [
@@ -315,7 +100,7 @@ import { UtilitiesModule } from 'ng-2-4-utilities';
     BrowserModule,
 
     // Specify your library as an import
-    UtilitiesModule
+    <title>Module
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -350,6 +135,6 @@ $ npm run lint
 
 ## License
 
-MIT © [Anartz Mugika Ledo](mailto:mugan86@gmail.com)
+MIT © [your name](mailto:email)
 
 

@@ -12,4 +12,8 @@ export const MODULES = [
   imports: [ MODULES ],
   exports: [ MODULES ]
 })
-export class UtilitiesModule { }
+export class {{cookiecutter.library_name.capitalize()}}Module { 
+  static forRoot(): ModuleWithProviders {
+        return {ngModule: {{cookiecutter.library_name.capitalize()}}, providers: []};
+    }
+}

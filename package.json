@@ -1,6 +1,6 @@
 {
-  "name": "ng-2-4-utilities",
-  "version": "0.1.7",
+  "name": "ng-2-4-{{cookiecutter.library_name.lower().replace(' ', '-'))}}",
+  "version": "0.0.1",
   "scripts": {
     "build": "ngc -p tsconfig.json",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
@@ -10,25 +10,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mugan86/ng-2-4-utilities.git"
+    "url": "https://github.com/{{cookiecutter.github_user}}/ng-2-4-utilities.git"
   },
   "author": {
-    "name": "Anartz Mugika Ledo",
-    "email": "mugan86@gmail.com"
+    "name": "{{cookiecutter.name}} {{cookiecutter.lastname}}",
+    "email": "{{cookiecutter.email}}"
   },
   "keywords": [
     "angular",
     "angular 2",
     "angular 4",
-    "utilities",
-    "math",
+    "{{cookiecutter.library_name.lower().replace(' ', '-'))}}",
     "string",
-    "pipes",
-    "default image directive"
+    "pipes"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mugan86/ng-2-4-utilities.git/issues"
+    "url": "https://github.com/{{cookiecutter.github_user}}/ng-2-4-{{cookiecutter.library_name.lower().replace(' ', '-'))}}.git/issues"
   },
   "main": "./dist/index.js",
   "dependencies": {

@@ -14,6 +14,6 @@ export const MODULES = [
 })
 export class {{cookiecutter.library_name.capitalize()}}Module { 
   static forRoot(): ModuleWithProviders {
-        return {ngModule: {{cookiecutter.library_name.capitalize()}}, providers: []};
+        return {ngModule: {{cookiecutter.library_name.capitalize()}}Module, providers: []};
     }
 }

@@ -1,4 +1,4 @@
-# Angular 2/4 Utilities library
+# Angular 2/4 library generator (in test)
 
 ## Installation
 

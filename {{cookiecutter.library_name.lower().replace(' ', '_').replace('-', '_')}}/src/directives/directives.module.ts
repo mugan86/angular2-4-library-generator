@@ -1,9 +1,9 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { {{cookiecutter.library_name.capitalize().replace(' ', '_').replace('-', '_')}}Directive } from './{{cookiecutter.library_name.lower().replace(' ', '_').replace('-', '_')}}.directive';
+import { {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '')}}Directive } from './{{cookiecutter.library_name.lower().replace(' ', '_').replace('-', '_')}}.directive';
 
 export const DIRECTIVES = [
-  {{cookiecutter.library_name.capitalize().replace(' ', '_').replace('-', '_')}}Directive
+  {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '')}}Directive
 ];
 
 @NgModule({

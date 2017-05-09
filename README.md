@@ -1,7 +1,7 @@
-# angular2-4-library-generator (in beta, not stable)
+# angular2-4-library-generator (in beta, not stable, documentation to instructions in progress)
 Angular 2/4 Library Generator with pipes, directives, services (with examples)
 
-COOKIECUTTER TEMPLATE FOR CREATE ANGULAR 2/4 LIBRARY STRUCTURE
+CookieCutter Template for create Angular 2/4 library structure
 ----------
 
 Cookiecutter_ template for a new Angular 2/4 library estructure. 
@@ -19,4 +19,85 @@ Generate a new angular 2/4 library structure:
 
      cookiecutter https://github.com/mugan86/angular2-4-library-generator.git
 
-This command should create a angular 2/4 library structure in the inside current dir.
+This command should create a angular 2/4 library structure in inside new library dir.
+
+## Library data:
+
+* Library name (Not start with numbers!!). For example: angular2librarytest
+* Author user name. For example: Anartz
+* Author last name. For example: Mugika
+* Author email. For example: mugan86@gmail.com
+* Github user. For example: mugan86
+
+# Instructions after create library with first explain
+
+## Installation
+
+To install this library, run:
+
+```bash
+$ npm install angular-2-test-library --save
+```
+
+## Consuming your library
+
+Once you have published your library to npm, you can import your library in any Angular application by running:
+
+```bash
+$ npm install angular-2-test
+```
+
+and then from your Angular `AppModule`:
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+
+// Import your library
+import { SampleModule } from 'angular-2-test';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+
+    // Specify your library as an import
+    LibraryModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Once your library is imported, you can use its components, directives and pipes in your Angular application:
+
+```xml
+<!-- You can now use your library component in app.component.html -->
+<h1>
+  {{title}}
+</h1>
+<sampleComponent></sampleComponent>
+```
+
+## Development
+
+To generate all `*.js`, `*.js.map` and `*.d.ts` files:
+
+```bash
+$ npm run tsc
+```
+
+To lint all `*.ts` files:
+
+```bash
+$ npm run lint
+```
+
+## License
+
+MIT © [Anartz Mugika](mailto:mugan86@gmail.com)

@@ -1,5 +1,5 @@
 {
-  "name": "ng-2-4-{{cookiecutter.library_name.lower().replace(' ', '-')}}",
+  "name": "ng-2-4-{{cookiecutter.library_name.lower().replace(' ', '-').replace('-', '_')}}",
   "version": "0.0.1",
   "scripts": {
     "build": "ngc -p tsconfig.json",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/{{cookiecutter.github_user}}/ng-2-4-{{cookiecutter.library_name.lower().replace(' ', '-')}}.git"
+    "url": "https://github.com/{{cookiecutter.github_user}}/ng-2-4-{{cookiecutter.library_name.lower().replace(' ', '-').replace('-', '_')}}.git"
   },
   "author": {
     "name": "{{cookiecutter.name}} {{cookiecutter.lastname}}",
@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/{{cookiecutter.github_user}}/ng-2-4-{{cookiecutter.library_name.lower().replace(' ', '-')}}.git/issues"
+    "url": "https://github.com/{{cookiecutter.github_user}}/ng-2-4-{{cookiecutter.library_name.lower().replace(' ', '-').replace('-', '_')}}.git/issues"
   },
   "main": "./dist/index.js",
   "dependencies": {

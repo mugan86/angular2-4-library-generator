@@ -19,11 +19,14 @@ Generate a new angular 2/4 library structure (with pipes examples, directives, s
 
      cookiecutter https://github.com/mugan86/angular2-4-library-generator.git
 
-This command should create a angular 2/4 library structure in inside new library dir.
+You've cloned <our-directory> before.
+ Is it okay to delete and re-clone it? [yes]:
+ 
+     Input "yes" or press intro without input nothing. This command should create a angular 2/4 library structure in inside new library dir.
 
 ## Library data:
 
-* Library name (Not start with numbers and not use more than two words). For example: angular2librarytest
+* Library name (Not start with numbers and not use more than two words and word limit is 10 characters. Required min 5 characters). For example: "angular2 library"
 * Author user name. For example: Anartz
 * Author last name. For example: Mugika
 * Author email. For example: mugan86@gmail.com

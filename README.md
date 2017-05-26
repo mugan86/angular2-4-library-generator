@@ -1,4 +1,5 @@
-# angular2-4-library-generator (in beta, not stable, documentation to instructions in progress)
+# Angular 2/4 Library Generator in one minute.
+
 Angular 2/4 Library Generator with pipes, directives, services (with examples)
 
 CookieCutter Template for create Angular 2/4 library structure

@@ -11,4 +11,4 @@ if not re.match(MODULE_REGEX, module_name):
     print('ERROR: %s is not a valid angular 2/4 library name!' % module_name)
     print('Please try again and input two words maximum and min 5 characters length one word.'
     # exits with status 1 to indicate failure
-    # sys.exit(1)
+    sys.exit(1)

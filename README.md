@@ -15,7 +15,7 @@ Install the latest cookiecutter::
 
      pip install --user cookiecutter
 
-Generate a new angular 2/4 library structure:
+Generate a new angular 2/4 library structure (with pipes examples, directives, services and components):
 
      cookiecutter https://github.com/mugan86/angular2-4-library-generator.git
 
@@ -23,7 +23,7 @@ This command should create a angular 2/4 library structure in inside new library
 
 ## Library data:
 
-* Library name (Not start with numbers!!). For example: angular2librarytest
+* Library name (Not start with numbers and not use more than two words). For example: angular2librarytest
 * Author user name. For example: Anartz
 * Author last name. For example: Mugika
 * Author email. For example: mugan86@gmail.com
@@ -36,7 +36,7 @@ This command should create a angular 2/4 library structure in inside new library
 To install this library, run:
 
 ```bash
-$ npm install angular-2-test-library --save
+$ npm install <create-library-name> (angular2librarytest in this case) --save
 ```
 
 ## Consuming your library
@@ -44,7 +44,7 @@ $ npm install angular-2-test-library --save
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install angular-2-test
+$ npm install angular2librarytest
 ```
 
 and then from your Angular `AppModule`:
@@ -56,7 +56,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'angular-2-test';
+import { Angular2librarytest } from 'angular2librarytest';
 
 @NgModule({
   declarations: [
@@ -66,7 +66,7 @@ import { SampleModule } from 'angular-2-test';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    Angular2librarytest
   ],
   providers: [],
   bootstrap: [AppComponent]

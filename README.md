@@ -27,7 +27,7 @@ You've cloned <our-directory> before.
 
 ## Library data:
 
-* Library name (Not start with numbers and not use more than two words and word limit is 10 characters. Required min 5 characters). For example: "angular2 library"
+* Library name (Not start with numbers and not use more than two words and word limit is 10 characters. Required min 5 characters. Only characters). For example: "angular library"
 * Author user name. For example: Anartz
 * Author last name. For example: Mugika
 * Author email. For example: mugan86@gmail.com
@@ -40,7 +40,7 @@ You've cloned <our-directory> before.
 To install this library, run:
 
 ```bash
-$ npm install <create-library-name> (angular2librarytest in this case) --save
+$ npm install <create-library-name> (angular-library in this case) --save
 ```
 
 ## Consuming your library
@@ -48,7 +48,7 @@ $ npm install <create-library-name> (angular2librarytest in this case) --save
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install angular2librarytest
+$ npm install angular-library
 ```
 
 and then from your Angular `AppModule`:
@@ -60,7 +60,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { Angular2librarytest } from 'angular2librarytest';
+import { Angularlibrary } from 'angular-library';
 
 @NgModule({
   declarations: [
@@ -70,7 +70,7 @@ import { Angular2librarytest } from 'angular2librarytest';
     BrowserModule,
 
     // Specify your library as an import
-    Angular2librarytest
+    Angularlibrary
   ],
   providers: [],
   bootstrap: [AppComponent]

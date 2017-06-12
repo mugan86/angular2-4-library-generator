@@ -1,4 +1,5 @@
-# angular2-4-library-generator (in beta, not stable, documentation to instructions in progress)
+# Angular 2/4 Library Generator in one minute.
+
 Angular 2/4 Library Generator with pipes, directives, services (with examples)
 
 CookieCutter Template for create Angular 2/4 library structure
@@ -19,11 +20,14 @@ Generate a new angular 2/4 library structure (with pipes examples, directives, s
 
      cookiecutter https://github.com/mugan86/angular2-4-library-generator.git
 
-This command should create a angular 2/4 library structure in inside new library dir.
+You've cloned <our-directory> before.
+ Is it okay to delete and re-clone it? [yes]:
+ 
+     Input "yes" or press intro without input nothing. This command should create a angular 2/4 library structure in inside new library dir.
 
 ## Library data:
 
-* Library name (Not start with numbers and not use more than two words). For example: angular2librarytest
+* Library name (Not start with numbers and not use more than two words and word limit is 10 characters. Required min 5 characters. Only characters). For example: "angular library"
 * Author user name. For example: Anartz
 * Author last name. For example: Mugika
 * Author email. For example: mugan86@gmail.com
@@ -36,7 +40,7 @@ This command should create a angular 2/4 library structure in inside new library
 To install this library, run:
 
 ```bash
-$ npm install <create-library-name> (angular2librarytest in this case) --save
+$ npm install <create-library-name> (angular-library in this case) --save
 ```
 
 ## Consuming your library
@@ -44,7 +48,7 @@ $ npm install <create-library-name> (angular2librarytest in this case) --save
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install angular2librarytest
+$ npm install angular-library
 ```
 
 and then from your Angular `AppModule`:
@@ -56,7 +60,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { Angular2librarytest } from 'angular2librarytest';
+import { Angularlibrary } from 'angular-library';
 
 @NgModule({
   declarations: [
@@ -66,7 +70,7 @@ import { Angular2librarytest } from 'angular2librarytest';
     BrowserModule,
 
     // Specify your library as an import
-    Angular2librarytest
+    Angularlibrary
   ],
   providers: [],
   bootstrap: [AppComponent]

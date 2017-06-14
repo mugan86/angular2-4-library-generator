@@ -17,9 +17,9 @@ if not re.match(MODULE_REGEX, module_name):
     sys.exit(1)
 
 # Change name and adapt to Angular structure
-positions_ = [pos + 1 for pos, char in enumerate(module_name) if char == ' ']
-positions_.insert(0, 0)
+# positions_ = [pos + 1 for pos, char in enumerate(module_name) if char == ' ']
+# positions_.insert(0, 0)
 
-indices = set(positions_)
-module_name = "".join(c.upper() if i in indices else c for i, c in enumerate(module_name))
-module_name = module_name.replace(' ', '')
+## indices = set(positions_)
+##module_name = "".join(c.upper() if i in indices else c for i, c in enumerate(module_name))
+## module_name = module_name.replace(' ', '')##

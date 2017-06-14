@@ -2,6 +2,8 @@ import { NgModule, ModuleWithProviders  } from '@angular/core';
 
 import { PipesModule } from './pipes';
 import { DirectivesModule } from './directives';
+import { ngModule: {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Service } from './services/{{cookiecutter.library_name.lower().replace(' ', '_').replace('-', '_')}}.service';
+
 
 export const MODULES = [
     PipesModule,
@@ -14,6 +16,6 @@ export const MODULES = [
 })
 export class {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Module { 
   static forRoot(): ModuleWithProviders {
-        return {ngModule: {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Module, providers: []};
+        return {ngModule: {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Module, providers: [ngModule: {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Service]};
     }
 }

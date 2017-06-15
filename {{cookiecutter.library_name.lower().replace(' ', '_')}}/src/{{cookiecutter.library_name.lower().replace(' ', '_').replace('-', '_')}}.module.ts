@@ -15,7 +15,10 @@ export const MODULES = [
   exports: [ MODULES ]
 })
 export class {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Module { 
-  static forRoot(): ModuleWithProviders {
-        return {ngModule: {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Module, providers: [{{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Service]};
+    static forRoot(): ModuleWithProviders {
+        return {
+                    ngModule: {{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Module, 
+                    providers: [{{cookiecutter.library_name.capitalize().replace('-', '').replace(' ', '').replace('_', '')}}Service]
+                };
     }
 }

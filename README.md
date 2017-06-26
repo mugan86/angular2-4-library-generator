@@ -12,10 +12,12 @@ Cookiecutter_ template for a new Angular 2/4 library estructure.
 Quickstart
 ----------
 
-Install the latest cookiecutter:: 
+Install the latest cookiecutter: 
 
      pip install --user cookiecutter
 
+In MAC:
+     http://macappstore.org/cookiecutter/
 Generate a new angular 2/4 library structure (with pipes examples, directives, services and components):
 
      cookiecutter https://github.com/mugan86/angular2-4-library-generator.git
